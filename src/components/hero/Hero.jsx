@@ -1,8 +1,29 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
 export default function Hero() {
   return (
-    <div>
+    <div className="relative">
+      <Icon
+        className="absolute right-[180px] top-[50px]"
+        icon="mdi:star-four-points"
+        width="14"
+        color="white"
+      />
+      <Icon
+        className="absolute left-[200px]"
+        icon="mdi:star-four-points"
+        color="#27ae60"
+        width="12"
+        height="12"
+      />
+      <Icon
+        className="absolute right-[550px] top-[125px]"
+        icon="mdi:star-four-points"
+        color="#F49B0B"
+        width="16"
+        height="16"
+      />
       <div className="text-white text-center mt-[53px] mx-[284px] text-[70px] font-Poppins not-italic">
         <div className="font-light leading-[91%] tracking-[-1.5%]">
           Unlock to
@@ -48,7 +69,9 @@ export default function Hero() {
         </div>
       </div>
       <a className="mt-[44px] mx-auto text-white flex w-[225px] h-[56px] justify-between flex-row py-[7px] px-4 not-italic items-center bg-[#ECAB03] rounded gap-[3] font-inter">
-       <p className="text-center ml-4 pl-4 my-auto font-semibold text-sm">Play The Game</p>
+        <p className="text-center ml-4 pl-4 my-auto font-semibold text-sm">
+          Play The Game
+        </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"

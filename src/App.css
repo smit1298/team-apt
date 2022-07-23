@@ -7,6 +7,40 @@
   box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17),
     inset 0px 2px 0px rgba(255, 255, 255, 0.24);
 }
+.one {
+  background: linear-gradient(1.87deg,
+    rgba(255, 229, 0, 0.5) 1.18%,
+    rgba(255, 230, 9, 0.435) 3.33%,
+    rgba(255, 231, 23, 0.335) 10.55%,
+    rgba(255, 233, 36, 0.245) 17.77%,
+    rgba(255, 234, 47, 0.17) 25.89%,
+    rgba(255, 234, 56, 0.11) 34.01%,
+    rgba(255, 235, 62, 0.06) 42.13%,
+    rgba(255, 236, 67, 0.025) 51.15%,
+    rgba(255, 236, 70, 0.005) 60.17%,
+    rgba(255, 236, 71, 0) 71.89%
+  );
+  transform: matrix(-0.59, 0.81, 0.81, 0.59, 0, 0);
+}
+
+/* .spinol{
+  transform: scaleX(1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+	float: none;
+} */
+
+.spinner{
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

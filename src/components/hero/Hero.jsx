@@ -1,10 +1,18 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import Rectangle1 from "../../assets/images/Rectangle1.png";
+import Rectangle2 from "../../assets/images/Rectangle2.png";
+import Rectangle3 from "../../assets/images/Rectangle3.png";
+import Rectangle4 from "../../assets/images/Rectangle4.png";
+import Rectangle5 from "../../assets/images/Rectangle5.png";
+import Left from "../../assets/images/coin left.png";
+import Right from "../../assets/images/coin right.png";
+import Coins from "../../assets/images/coin pot.png";
 
 export default function Hero() {
   return (
     <div className="relative">
-      <Icon
+      {/* <Icon
         className="absolute right-[180px] top-[50px]"
         icon="mdi:star-four-points"
         width="14"
@@ -24,7 +32,20 @@ export default function Hero() {
         width="16"
         height="16"
       />
-      <div className="text-white text-center mt-[53px] mx-[284px] text-[70px] font-Poppins not-italic">
+      <Icon
+        className="absolute left-[480px] top-[600px]"
+        icon="mdi:star-four-points"
+        width="14"
+        color="white"
+      />
+      <Icon
+        className="absolute right-[550px] top-[225px]"
+        icon="mdi:star-four-points"
+        color="#F49B0B"
+        width="16"
+        height="16"
+      /> */}
+      <div className="text-white text-center mt-[53px]  mx-5 text-[70px] font-Poppins not-italic lg:mx-[284px]">
         <div className="font-light leading-[91%] tracking-[-1.5%]">
           Unlock to
         </div>
@@ -39,11 +60,11 @@ export default function Hero() {
           days
         </p>
       </div>
-      <div className="play flex flex-col items-start py-6 px-[27px] gap-4 mx-[507px] rounded-lg bg-red-400 font-inter not-italic text-white">
-        <p className="mt-6 mx-[155px] mb-4 font-bold text-base text-center leading-[160%]">
+      <div className="play flex flex-col items-start py-6 px-[27px] gap-4 rounded-lg mx-5 font-inter not-italic text-white lg:mx-[507px]">
+        <p className="mt-6 mx-auto mb-4 font-bold text-base text-center leading-[160%]">
           🚀 How To Play
         </p>
-        <div className="font-normal text-sm leading-[160px] ">
+        <div className="font-normal text-sm leading-[160px]">
           <ol className="ml-5 tracking-[-0.02em] ">
             <li className="ml-[27px] list-decimal">
               Guess the right combination of numbers
@@ -92,6 +113,25 @@ export default function Hero() {
           />
         </svg>
       </a>
+      <div className="">
+        {/* <div className="spinner relative rounded-full h-[60vh] w-[60vh]"> */}
+        {/* <div className="one absolute w-[121.14px] h-[744.46px] top-[-120px] left-[96.57px]"></div> */}
+        {/* <img className="absolute " src={Rectangle1} alt="rectangle1" /> */}
+        {/*<img className="absolute" src={Rectangle2} alt="rectangle2" />
+           <img className="absolute" src={Rectangle3} alt="rectangle3" />
+          <img className="absolute" src={Rectangle4} alt="rectangle4" />
+          <img className="absolute" src={Rectangle5} alt="rectangle5" /> */}
+        {/* </div> */}
+
+        <div className="relative">
+          <img className="animate-bounce w-[62.51px] h-[94.92px] absolute left-[450px]" src={Left} alt="left" />
+          <img className="animate-bounce w-[62.51px] h-[94.92px] absolute right-[450px] top-[40px]" src={Right} alt="left" />
+        </div>
+
+        <div className="">
+          <img className="w-[200px] h-[35px] mx-auto" src={Coins} alt="coin" />
+        </div>
+      </div>
     </div>
   );
 }

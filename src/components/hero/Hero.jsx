@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Icon } from "@iconify/react";
-import Rectangle1 from "../../assets/images/Rectangle1.png";
-import Rectangle2 from "../../assets/images/Rectangle2.png";
-import Rectangle3 from "../../assets/images/Rectangle3.png";
-import Rectangle4 from "../../assets/images/Rectangle4.png";
-import Rectangle5 from "../../assets/images/Rectangle5.png";
+import Spin from "../../assets/images/spinol.png";
 import Left from "../../assets/images/coin left.png";
 import Right from "../../assets/images/coin right.png";
 import Coins from "../../assets/images/coin pot.png";
 
 export default function Hero() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="relative">
-      {/* <Icon
-        className="absolute right-[180px] top-[50px]"
+      <Icon
+        className="absolute lg:right-[180px] top-[50px]"
         icon="mdi:star-four-points"
         width="14"
         color="white"
@@ -44,8 +45,12 @@ export default function Hero() {
         color="#F49B0B"
         width="16"
         height="16"
-      /> */}
-      <div className="text-white text-center mt-[53px]  mx-5 text-[70px] font-Poppins not-italic lg:mx-[284px]">
+      />
+
+      <div
+        data-aos="fade-up"
+        className="text-white text-center mt-[53px]  mx-5 text-[70px] font-Poppins not-italic lg:mx-[284px]"
+      >
         <div className="font-light leading-[91%] tracking-[-1.5%]">
           Unlock to
         </div>
@@ -53,7 +58,11 @@ export default function Hero() {
           Power your dreams!
         </div>
       </div>
-      <div className="text-white text-center font-inter mt-[23px] mb-[24px] not-italic font-normal text-[29.4318px]">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1200"
+        className="text-white text-center font-inter mt-[23px] mb-[24px] not-italic font-normal text-[29.4318px]"
+      >
         <p className="leading-[111.5%] tracking-[ -0.06em]">
           Stand a chance to win <br />
           <span className="font-bold"> N3,000,000</span> everyday for the next 5
@@ -89,7 +98,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <a className="mt-[44px] mx-auto text-white flex w-[225px] h-[56px] justify-between flex-row py-[7px] px-4 not-italic items-center bg-[#ECAB03] rounded gap-[3] font-inter">
+      <a className="mt-[44px] mb-[300px] mx-auto text-white flex w-[225px] h-[56px] justify-between flex-row py-[7px] px-4 not-italic items-center bg-[#ECAB03] rounded gap-[3] font-inter">
         <p className="text-center ml-4 pl-4 my-auto font-semibold text-sm">
           Play The Game
         </p>
@@ -113,24 +122,31 @@ export default function Hero() {
           />
         </svg>
       </a>
-      <div className="">
-        {/* <div className="spinner relative rounded-full h-[60vh] w-[60vh]"> */}
-        {/* <div className="one absolute w-[121.14px] h-[744.46px] top-[-120px] left-[96.57px]"></div> */}
-        {/* <img className="absolute " src={Rectangle1} alt="rectangle1" /> */}
-        {/*<img className="absolute" src={Rectangle2} alt="rectangle2" />
-           <img className="absolute" src={Rectangle3} alt="rectangle3" />
-          <img className="absolute" src={Rectangle4} alt="rectangle4" />
-          <img className="absolute" src={Rectangle5} alt="rectangle5" /> */}
-        {/* </div> */}
 
-        <div className="relative">
-          <img className="animate-bounce w-[62.51px] h-[94.92px] absolute left-[450px]" src={Left} alt="left" />
-          <img className="animate-bounce w-[62.51px] h-[94.92px] absolute right-[450px] top-[40px]" src={Right} alt="left" />
+      <div className="relative flex">
+        <div className="overflow-hidden h-[300px] bg-red-600">
+           <img
+          className="spinner absolute w-[300px] h-[600px] left-[555px]  top-[-300px]"
+          src={Spin}
+          alt="rectangle1"
+        />
         </div>
-
-        <div className="">
-          <img className="w-[200px] h-[35px] mx-auto" src={Coins} alt="coin" />
-        </div>
+       
+        <img
+          className="animate-bounce w-[62.51px] h-[94.92px] absolute left-[450px] top-[-100px]"
+          src={Left}
+          alt="left"
+        />
+        <img
+          className="animate-bounce w-[62.51px] h-[94.92px] absolute right-[450px] top-[-103px]"
+          src={Right}
+          alt="left"
+        />
+        <img
+          className="w-[200px] absolute h-[35px] left-[650px] mt-[-35px] mx-auto "
+          src={Coins}
+          alt="coin"
+        />
       </div>
     </div>
   );

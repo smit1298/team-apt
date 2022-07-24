@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .play {
   background: linear-gradient(
     180deg,
@@ -8,7 +14,8 @@
     inset 0px 2px 0px rgba(255, 255, 255, 0.24);
 }
 .one {
-  background: linear-gradient(1.87deg,
+  background: linear-gradient(
+    1.87deg,
     rgba(255, 229, 0, 0.5) 1.18%,
     rgba(255, 230, 9, 0.435) 3.33%,
     rgba(255, 231, 23, 0.335) 10.55%,
@@ -30,7 +37,7 @@
 	float: none;
 } */
 
-.spinner{
+.spinner {
   animation: spin 6s linear infinite;
 }
 @keyframes spin {

@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Icon } from "@iconify/react";
-import Spin from "../../assets/images/spinol.png";
-import Left from "../../assets/images/coin left.png";
-import Right from "../../assets/images/coin right.png";
-import Coins from "../../assets/images/coin pot.png";
+
 
 export default function Hero() {
   useEffect(() => {
@@ -14,7 +11,7 @@ export default function Hero() {
   return (
     <div className="relative">
       <Icon
-        className="absolute lg:right-[180px] top-[50px]"
+        className="absolute lg:right-[180px] lg:top-[50px]"
         icon="mdi:star-four-points"
         width="14"
         color="white"
@@ -34,9 +31,9 @@ export default function Hero() {
         height="16"
       />
       <Icon
-        className="absolute left-[480px] top-[600px]"
+        className="absolute left-[350px] lg:left-[480px] lg:top-[600px]"
         icon="mdi:star-four-points"
-        width="14"
+        width="24"
         color="white"
       />
       <Icon
@@ -45,6 +42,12 @@ export default function Hero() {
         color="#F49B0B"
         width="16"
         height="16"
+      />
+      <Icon
+        className="absolute left-[30px] top-[300px] lg:left-[510px] lg:top-[185px]"
+        icon="mdi:star-four-points"
+        color="blue"
+        width="24"
       />
 
       <div
@@ -69,6 +72,7 @@ export default function Hero() {
           days
         </p>
       </div>
+
       <div className="play flex flex-col items-start py-6 px-[27px] gap-4 rounded-lg mx-5 font-inter not-italic text-white lg:mx-[507px]">
         <p className="mt-6 mx-auto mb-4 font-bold text-base text-center leading-[160%]">
           🚀 How To Play
@@ -98,6 +102,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
+
       <a className="mt-[44px] mb-[300px] mx-auto text-white flex w-[225px] h-[56px] justify-between flex-row py-[7px] px-4 not-italic items-center bg-[#ECAB03] rounded gap-[3] font-inter">
         <p className="text-center ml-4 pl-4 my-auto font-semibold text-sm">
           Play The Game
@@ -123,7 +128,7 @@ export default function Hero() {
         </svg>
       </a>
 
-      <div className="relative flex">
+      {/* <div className="relative flex">
         <div className="overflow-hidden h-[300px] bg-red-600">
            <img
           className="spinner absolute w-[300px] h-[600px] left-[555px]  top-[-300px]"
@@ -147,7 +152,8 @@ export default function Hero() {
           src={Coins}
           alt="coin"
         />
-      </div>
+      </div> */}
+
     </div>
   );
 }
